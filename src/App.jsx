@@ -5,37 +5,36 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from 'react-router-dom';
 
 import Inbox from './cmp/Inbox';
+import AddButton from './cmp/AddButton';
+
 
 
 function App() {
   return (
     <React.Fragment>
-    <div className="container-fluid bg-dark ">
-      <header className="App-header">
-        <Menu />
-      </header>
+      <Router>
+      <Menu />
+      <Switch>
+        <Route exact path="/">
+          <Inbox />
+        </Route>
 
-      
-    </div>
+        <Route path="/panel">
+          <h1>adfasdf</h1>
+        </Route>
+
+        <Route path="/a">
+          <h1>pag 1</h1>
+        </Route>
+      </Switch>
+      <AddButton />
+      </Router>
     <div className="container">
-    <Router>
-    
-
-    <Switch>
-      <Route path="/panel">
-
-      </Route>
-      <Route exact path="/">
-        <Inbox />
-      </Route>
-    </Switch>
-    </Router>
-  </div>
-  </React.Fragment>
+    </div>
+    </React.Fragment>
   );
 }
 

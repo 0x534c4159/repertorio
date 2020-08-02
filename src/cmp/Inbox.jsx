@@ -4,7 +4,7 @@ export default function Inbox(){
 
     return(
         <div className="container d-flex mt-4">
-            <table className="table table-hover ">
+            <table className="table table-hover">
                 <thead className="thead-light">
                     <tr>
                         <th scope="col">Folio</th>
@@ -14,7 +14,7 @@ export default function Inbox(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr onClick={()=>{ window.location.href='/a'}}>
                         <th scope="row">20_0001</th>
                         <td>01/01/2020</td>   
                         <td>Universidad de Concepcion</td>   
