@@ -9,6 +9,7 @@ import {
 
 import Inbox from './cmp/Inbox';
 import AddButton from './cmp/AddButton';
+import NewDocument from './cmp/NewDocument';
 
 
 
@@ -29,10 +30,15 @@ function App() {
         <Route path="/a">
           <h1>pag 1</h1>
         </Route>
+
+        <Route path="/new">
+          <NewDocument />
+        </Route>
       </Switch>
       <AddButton />
       </Router>
     <div className="container">
+      
     </div>
     </React.Fragment>
   );

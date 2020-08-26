@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default function Inbox(){
+//onClick={()=>{ window.location.href='/a'}}
 
-    return(
-        <div className="container d-flex mt-4">
+export default class Inbox extends Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            registros: ''
+        }
+
+    }
+
+    render(){
+        return(
+            <div className="container d-flex mt-4">
             <table className="table table-hover">
                 <thead className="thead-light">
                     <tr>
@@ -14,7 +26,7 @@ export default function Inbox(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr onClick={()=>{ window.location.href='/a'}}>
+                    <tr >
                         <th scope="row">20_0001</th>
                         <td>01/01/2020</td>   
                         <td>Universidad de Concepcion</td>   
@@ -47,6 +59,7 @@ export default function Inbox(){
                 </tbody>
             </table>
         </div>
-    )
+        )
+    }
 
 }
